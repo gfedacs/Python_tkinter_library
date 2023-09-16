@@ -20,10 +20,7 @@ def open_website(event):
     webbrowser.open("https://github.com/gfedacs")
 
 
-def criar_janela():
-    newindow = ctk.CTkToplevel(window,fg_color='red')
-    newindow.geometry('700x400')
-    window.mainloop()
+
 
 def evento():
     print('O botão foi clicado')
@@ -35,7 +32,7 @@ ctk.CTkLabel(window,text='Curso de custom tkinter = Entry',
              font=('arial bold',20)).pack(pady=20,padx=5)
 
 
-button = ctk.CTkButton(window,
+button = ctk.CTkButton(window, 
                        text='Youtube',
                        command=evento,
                        width=300,
@@ -57,6 +54,6 @@ lb = ctk.CTkLabel(window, text='', image=img)
 lb.pack(pady=20, padx=5)
 
 lb.bind("<Button-1>", open_website)
-
+print('teste')
 
 window.mainloop()
